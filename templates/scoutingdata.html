@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>558 scouting database</title>
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css">
+
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/AddData.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a href="/logout">logout</a></li>
+            <li class="active"><a href="/showEnterData">Enter Data</a></li>
+            <li><a href="/showInfo">Database</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">558 scouting database</h3>
+      </div>
+      <section>
+        <form class="form-horizontal" autocomplete="off">
+          <fieldset>
+            <legend>Add data</legend>
+            <div class="form-group">
+              <label for="txtName" class="col-md-4 control-label">Scouter's Name</label>
+              <div class="col-md-6">
+                <input id="txtName" name="txtName" type="text" placeholder="eg. Steve or Josh" class="form-control input-md" required="testing">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtTeam" class="col-md-4 control-label">Team name</label>
+              <div class="col-md-6">
+                <input id="txtTeam" type="number" name="inputTeam" placeholder="eg. 195 or 5142" class="form-control input-md" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtDriveTrain" class="col-md-4 control-label">Type of DriveTrain</label>
+              <div class="col-md-4">
+                <select name="selectDriveTrain" class="form-control" required>
+                  <option value="">Select a type</option>
+                  <option value="Tank">Tank</option>
+                  <option value="Swerve">Swerve</option>
+                  <option value="H-Drive">H-Drive</option>
+                  <option value"Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="RobotWidth" class="col-md-4 control-label">Robots width(in inches)</label>
+              <div class="col-md-6">
+                <input id="RobotWidth" type="number" name="RobotWidth" class="form-control input-md"required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="RobotLength" class="col-md-4 control-label">Robot's Length(in Inches)</label>
+              <div class="col-md-6">
+                <input id="RobotLength" type="number" name="RobotLength" class="form-control input-md" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtHeightGround" class="col-md-4 control-label">What the height from the ground to the bottom of their bumper?(inches)</label>
+              <div class="col-md-6">
+                <input id="txtHeightGround" type="number" name="txtHeightGround" class="form-control input-md" placeholder="Numbers only" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="numDriveMotors" class="col-md-4 control-label">How many Drive CIMS do they use?</label>
+              <div class="col-md-6">
+                <input id="numDriveMotors" type="number" name="numDriveMotors" class="form-control input-md" placeholder="Numbers only" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="selectVision" class="col-md-4 control-label">Do they use they use Vision targeting?</label>
+              <div class="col-md-6">
+                <select name="selectVision" class="form-control" required>
+                  <option value="">Select an option</option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtLanguage" class="col-md-4 control-label">What programming language do they use?</label>
+              <div class="col-md-6">
+                <select name="selectLanguage" class="form-control" required>
+                  <option value="">Select Language</option>
+                  <option value="C++">C++</option>
+                  <option value="Java">Python</option>
+                  <option value="Labview">Labview</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="maxSpeed" class="col-md-4 control-label">What is their MAX speed?(feet per second)</label>
+              <div class="col-md-6">
+                <input id="inputMaxSpeed" type="number" name="inputMaxSpeed" class="form-control input-md" placeholder="Eg. 12" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="partnerClimb" class="col-md-4 control-label">Can they help an Alliance Partner Climb?</label>
+              <div class="col-md-6">
+                <select name="selectPartnerClimb" class="form-control" required>
+                  <option value="">Select a option</option>
+                  <option value="yes 1 partner">yes 1 partner</option>
+                  <option value="yes 2 partners">yes 2 partners</option>
+                  <option value="no">no<option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mainGoal" class="col-md-4 control-label">What is their Main Goal in a match?</label>
+              <div class="col-md-6">
+                <select name="selectMainGoal" class="form-control" required>
+                  <option value="">Select a option</option>
+                  <option value="Defense">Defense</option>
+                  <option value="Switch">Switch</option>
+                  <option value="scale">scale<option>
+                  <option value="Exchange">Exchange</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtCube" class="col-md-4 control-label">Where do they get their cubes?</label>
+              <div class="col-md-6">
+                <select name="selectCube" class="form-control" required>
+                  <option value="">Select a option</option>
+                  <option value="Defense">Floor</option>
+                  <option value="Switch">Human feeder station</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtCube" class="col-md-4 control-label">Where do they get their cubes?</label>
+              <div class="col-md-6">
+                <select name="selectCube" class="form-control" required>
+                  <option value="">Select a option</option>
+                  <option value="Defense">Floor</option>
+                  <option value="Switch">Human feeder station</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <button id="btnData" type="button" class="btn btn-lg btn-primary btn-block">Publish</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <footer class="footer">
+        <p>&copy; FRC Team 558</p>
+      </footer>
+    </div>
+  </body>
+</html>

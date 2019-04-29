@@ -1,0 +1,108 @@
+CREATE TABLE `tbl_data` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NULL
+  `team_name` VARCHAR(100) NULL,
+  `robotWidth` VARCHAR(100) NULL,
+  `robotLength` VARCHAR(100) NULL,
+  `heightGround` VARCHAR(100) NULL,
+  `driveMotors` VARCHAR(100) NULL,
+  `selectVision` VARCHAR(100) NULL,
+  `selectLanguage` VARCHAR(100) NULL,
+  `Max Speed` VARCHAR(100) NULL,
+  `Partner climb` VARCHAR(100) NULL,
+  `Main Goal` VARCHAR(100) NULL,
+  `Cube` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`));
+
+  CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_addData`(
+      IN p_Name VARCHAR(100),
+      IN p_team_name VARCHAR(100),
+      IN p_robotWidth VARCHAR(100),
+      IN p_robotLength VARCHAR(100),
+      IN p_heightGround VARCHAR(100),
+      IN p_driveMotors VARCHAR(100),
+      IN p_selectVision VARCHAR(100),
+      IN p_selectLanguage VARCHAR(100),
+      IN p_Max Speed VARCHAR(100),
+      IN p_Partner climb VARCHAR(100),
+      IN p_Main Goal VARCHAR(100),
+      IN p_Cube VARCHAR(100),
+  )
+BEGIN
+      if ( select exists (select 1 from tbl_data where team_name=p_team_name and Name=p_Name)) THEN
+
+          select 'Team exists !!';
+
+      ELSE
+
+          insert into tbl_data
+          (
+        Name
+        team_name
+        robotWidth
+        robotLength
+        heightGround
+        driveMotors
+        selectVision
+        selectLanguage
+        Max Speed
+        Partner Climb
+        Main Goal
+        Cube
+          )
+          values
+          (
+        p_Name
+        p_team_name
+        p_robotWidth
+        p_robotLength
+        p_heightGround
+        p_driveMotors
+        p_selectVision
+        p_selectLanguage
+        p_Max Speed
+        p_Partner Climb
+        p_Main Goal
+        p_Cube
+          );
+
+      END IF;
+  END
+
+
+
+
+
+
+  WORKS
+  CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_addWish`(
+      IN p_Name VARCHAR(100),
+      IN p_team_name VARCHAR(100),
+      IN p_robotWidth VARCHAR(100),
+      IN p_robotLength VARCHAR(100),
+      IN p_heightGround VARCHAR(100),
+      IN p_driveMotors VARCHAR(100),
+      IN p_selectVision VARCHAR(100),
+      IN p_selectLanguage VARCHAR(100),
+      IN p_Max_Speed VARCHAR(100),
+      IN p_Partner_climb VARCHAR(100),
+      IN p_Main_Goal VARCHAR(100),
+      IN p_Cube VARCHAR(100),
+      )
+BEGIN
+    insert into tbl_wish(
+        wish_title,
+        wish_description,
+        wish_user_id,
+        wish_date
+    )
+    values
+    (
+        p_Name
+        p_teamName
+        p_robotWidth
+        p_
+        NOW()
+    );
+END
+;

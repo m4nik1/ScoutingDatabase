@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>558_scouting database</title>
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/showEnterData">Enter Data</a></li>
+            <li class="active"><a href="/showInfo">Database</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">558 scouting Database</h3>
+      </div>
+        <section>
+          <fieldset>
+            <legend>Database table</legend>
+            {% for table in tables %}
+              {{ table|safe }}
+            {% endfor %}
+          </fieldset>
+        </section>
+  </body>
+</html>

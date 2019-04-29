@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>558 Scouting Database</title>
+
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css">
+    <link href="../static/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="#">Sign In</a></li>
+            <li role="presentation" ><a href="/showSignup">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">558 scouting Database</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Database Sign up</h1>
+        <form class="form-signin" action="/validateLogin" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+
+        <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy;FRC Team 558</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
